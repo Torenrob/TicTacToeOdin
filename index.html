@@ -9,11 +9,60 @@
       <script src="script.js" defer="defer"></script>
       <link rel="stylesheet" href="reset.css">
       <link rel="stylesheet" href="style.css">
-      <title>Untitled</title>
+      <title>Tic-Tac-Toe</title>
    </head>
 
    <body>
-      <div></div>
+      <header>
+         <h2>Tic Tac Toe</h2>
+      </header>
+      <form action="/play-tic-tac-toe" method="post">
+         <div class="form-group">
+            <label for="player1-play-piece">Player 1 play piece:</label>
+            <input type="text" name="player1-play-piece" id="player1-play-piece" required>
+         </div>
+         <div class="form-group">
+            <label for="player2-play-piece">Player 2 play piece:</label>
+            <input type="text" name="player2-play-piece" id="player2-play-piece" required>
+         </div>
+         <div class="form-group">
+            <input type="submit" value="Play Tic Tac Toe!">
+         </div>
+      </form>
+      <main id="gameBoard">
+         <section id="playerOne">
+            <h3></h3>
+            <img src="" alt="">
+         </section>
+         <table>
+            <tr>
+               <td style="border-left: none; border-top: none;"></td>
+               <td style="border-top: none;"></td>
+               <td style="border-right: none; border-top: none;"></td>
+            </tr>
+            <tr>
+               <td style="border-left: none;"></td>
+               <td></td>
+               <td style="border-right: none;"></td>
+            </tr>
+            <tr>
+               <td style="border-left: none; border-bottom: none;"></td>
+               <td style="border-bottom: none;"></td>
+               <td style="border-right: none; border-bottom: none;"></td>
+            </tr>
+         </table>
+         <section id="playerTwo">
+            <h3></h3>
+            <img src="" alt="">
+         </section>
+      </main>
+      <footer>
+         <span style="display: flex; align-items: center; justify-content: center;">Tic-Tac-Toe &copy
+            2023
+            <a href="https://github.com/Torenrob"
+               style="width: 27%; display: flex; align-items: center; text-decoration: none; color: inherit; justify-content: space-between;">&nbspTorenRob
+               <img style="margin-left: 3px;" src="Images/iconmonstr-github-3.svg"> </a>
+      </footer>
    </body>
 
 </html>
