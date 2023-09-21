@@ -1,3 +1,4 @@
+const onScreenBoard = document.getElementsByTagName("td");
 const gameBoard = {
 	board: [
 		[null, null, null],
@@ -37,3 +38,7 @@ const gameBoard = {
 const player = function (name, marker) {
 	return { name, marker };
 };
+
+console.log(onScreenBoard);
+
+console.log(gameBoard.board.flat());
