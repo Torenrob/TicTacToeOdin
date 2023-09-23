@@ -8,7 +8,6 @@
    - Name
    - Marker
      > Submit Form
-2. Dialogue Window for Coin Flip to decide who goes firs
-   - Simple choice of head or tails
+2. Coin Flip to decide who goes first
 3. Game Starts
    1.

@@ -70,7 +70,7 @@ const boardData = (() => {
 		return null;
 	};
 
-	return { board, checkWinner };
+	return { board, checkWinner, placeMarker };
 })();
 
 //
@@ -95,4 +95,4 @@ gameBoard.forEach((element) => {
 	element.addEventListener("click", () => jeff.playerChoice(element));
 });
 
-window.addEventListener("load");
+// window.addEventListener("load");
