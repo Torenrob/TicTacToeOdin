@@ -8,9 +8,11 @@
       <meta name="description" content="">
       <script src="js/script.js" defer></script>
       <script src="js/coinFlipScript.js" defer></script>
-      <link rel="stylesheet" href="css/reset.css">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/coinFlipStyle.css">
+      <link rel="stylesheet" href="styles/sassy.css">
+      <link rel="stylesheet" href="styles/reset.css">
+      <link rel="stylesheet" href="styles/coinFlipStyle.css">
+      <link rel="stylesheet" href="styles/style.css">
+      <link rel="stylesheet" href="">
       <title>Tic-Tac-Toe</title>
    </head>
 
@@ -19,32 +21,31 @@
          <h2>Tic Tac Toe</h2>
       </header>
       <form id="playerSelectForm" class="container">
-         <div class="form-group">
-            <label for="player1-name">Player 1 Name:</label>
-            <input type="text" name="player1-name" id="player1-name" required>
+         <div class="input-group input-group-sm mb-1">
+            <label class="input-group-text" for="player1-name">Player 1 Name:</label>
+            <input class="form-control" type="text" name="player1-name" id="player1-name" value="Player 1" required>
          </div>
-         <div class="form-group">
-            <label for="player1-play-piece">Player 1 Marker:</label>
-            <input style="width: 10px" type="text" name="player1-play-piece" id="player1-play-piece" value="X"
+         <div class="playerMarkers input-group input-group-sm mb-1">
+            <label class="input-group-text" for="player1-play-piece">Player 1 Marker:</label>
+            <input class="form-control" type="text" name="player1-play-piece" id="player1-play-piece" value="X"
                maxlength="1" required>
          </div>
+         <div class="input-group input-group-sm mb-1">
+            <label class="input-group-text" for="player2-name">Player 2 Name:</label>
+            <input class="form-control" type="text" name="player2-name" id="player2-name" value="Player 2" required>
          </div>
-         <div class="form-group">
-            <label for="player2-name">Player 2 Name:</label>
-            <input type="text" name="player2-name" id="player2-name" required>
+         <div class="input-group input-group-sm mb-3">
+            <label class="input-group-text" for="player2-play-piece">Player 2 Marker:</label>
+            <input class="form-control" type="text" name="player2-play-piece" id="player2-play-piece" value="O" max="1"
+               maxlength="1" required>
          </div>
-         <div class="form-group">
-            <label for="player2-play-piece">Player 2 Marker:</label>
-            <input style="width: 10px;" type="text" name="player2-play-piece" id="player2-play-piece" value="O" max="1"
-               required>
-         </div>
-         <div class="form-group">
-            <input type="submit" value="Play Tic Tac Toe!">
-         </div>
+         <button type="submit" id="submitBtn" class="oneBtn">Submit</button>
       </form>
-      <div class="container">
-         <h3 style="display: flex; justify-content: center; margin-bottom: 10px;">Player 1</h3>
-         <h3 style="display: flex; justify-content: center;">Choose Heads or Tails!</h3>
+      <div class="container" id="coinFlipContainer">
+         <div id="flipBoxMessage">
+            <h4 style="display: flex; justify-content: center; margin-bottom: 10px;"></h4>
+            <h4 style="display: flex; justify-content: center;">Choose Heads or Tails!</h4>
+         </div>
          <div class="coin" id="coin">
             <div class="heads">
                <img src="images/heads.svg">
@@ -53,7 +54,7 @@
                <img src="images/tails.svg">
             </div>
          </div>
-         <div class="buttons">
+         <div class="buttons" id="buttonDiv">
             <button id="heads-button">
                Heads
             </button>
@@ -62,13 +63,15 @@
             </button>
          </div>
       </div>
-      <main id="gameBoard">
-         <section id="playerOne">
+      <main>
+         <div id="gameResult" class="container">
+         </div>
+         <section style="display: flex; flex-direction: column;">
             <h3></h3>
-            <img src="" alt="">
+            <h5 style="align-self: center; color: red;"></h5>
          </section>
          <table>
-            <tr>
+            <tr id="gameBoard">
                <td style="border-left: none; border-top: none;"></td>
                <td style="border-top: none;"></td>
                <td style="border-right: none; border-top: none;"></td>
@@ -84,11 +87,15 @@
                <td style="border-right: none; border-bottom: none;"></td>
             </tr>
          </table>
-         <section id="playerTwo">
+         <section style="display: flex; flex-direction: column;">
             <h3></h3>
-            <img src="" alt="">
+            <h5 style="align-self: center; color: red;"></h5>
          </section>
       </main>
+      <div id="turnKeeper">
+         <h2>Your Turn:</h2>
+         <h2 style="color: red;"></h2>
+      </div>
       <footer>
          <span style="display: flex; align-items: center; justify-content: center;">Tic-Tac-Toe &copy
             2023

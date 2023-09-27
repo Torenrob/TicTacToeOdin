@@ -1,0 +1,91 @@
+body {
+	display: flex;
+	flex-direction: column;
+	color: #e5e5e5;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+}
+
+main {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 8%;
+}
+
+h3 {
+	font-size: 90px;
+}
+
+h5 {
+	font-size: 70px;
+}
+
+table {
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	border-collapse: collapse;
+	border: none;
+	position: absolute;
+	left: 37%;
+}
+
+td {
+	width: 33.3333333333%;
+	height: 33.3333333333%;
+	border: 2px solid #e5e5e5;
+	font-family: sans-serif;
+	text-align: center;
+	vertical-align: center;
+	font-size: 140px;
+	cursor: pointer;
+	color: red;
+}
+
+#formWarning {
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 5px;
+	color: red;
+}
+
+#gameResult {
+	width: fit-content;
+	top: 47.5%;
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+#resetBtn {
+	align-self: center;
+}
+
+span {
+	vertical-align: middle;
+}
+
+#turnKeeper {
+	text-align: center;
+	position: fixed;
+	top: 80%;
+	left: 46%;
+	visibility: hidden;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+button:disabled {
+	background-color: black;
+}
